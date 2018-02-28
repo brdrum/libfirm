@@ -196,6 +196,7 @@ struct arch_register_class_t {
 	                                        class. */
 	/** don't do register allocation for this class */
 	bool                       manual_ra : 1;
+	bool                       double_registers_allowed : 1;
 };
 
 static inline const arch_register_t *arch_register_for_index(

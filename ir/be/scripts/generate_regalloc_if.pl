@@ -113,6 +113,7 @@ EOF
 	my $regs      = $class->{registers};
 	my $numregs   = @$regs;
 	my $manual_ra = has_flag("manual_ra", $class->{flags});
+	my $double_registers_allowed = has_flag("double_registers_allowed", $class->{flags});
 	my $uname     = uc($regs->[0]->{name});
 	$regclasses .= <<EOF;
 	{
@@ -123,6 +124,7 @@ EOF
 		.index     = $class_enum,
 		.n_regs    = $numregs,
 		.manual_ra = $manual_ra,
+		.double_registers_allowed = $double_registers_allowed,
 	},
 EOF
 
